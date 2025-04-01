@@ -2,10 +2,10 @@ package modelo;
 
 public class Calculos
 {
-    public Double resultado;
-    public Double n1;
-    public Double n2;
-    public String op;
+    private Double resultado;
+    private Double n1;
+    private Double n2;
+    private String op;
 
     public Calculos(Double n1, Double n2, String op)
     {
@@ -15,16 +15,19 @@ public class Calculos
         this.calcular();
     }
     
-    
-    
-    public Double calcular()
+    private void calcular()
     {
         resultado = 0.0;
-        if(this.op.equals("+")) resultado = this.n1 + this.n2;
-        if(this.op.equals("-")) resultado = this.n1 - this.n2;
-        if(this.op.equals("*")) resultado = this.n1 * this.n2;
-        if(this.op.equals("/")) resultado = this.n1 / this.n2;
-        
+        if(this.op.equals("+")) this.resultado = this.n1 + this.n2;
+        if(this.op.equals("-")) this.resultado = this.n1 - this.n2;
+        if(this.op.equals("*")) this.resultado = this.n1 * this.n2;
+        if(this.op.equals("/")) this.resultado = this.n1 / this.n2;
+    }
+
+    public Double getResultado()
+    {
         return resultado;
     }
+
+    
 }

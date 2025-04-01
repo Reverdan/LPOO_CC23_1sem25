@@ -143,7 +143,7 @@ public class frmPrincipal extends javax.swing.JDialog
         Controle controle = new Controle();
         controle.executar(txfPrimeiroNumero.getText(),
                 txfSegundoNumero.getText(), op);
-        lblResultado.setText(controle.resposta);
+        lblResultado.setText(controle.getResposta());
     }
     
     private void btnSomarActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnSomarActionPerformed

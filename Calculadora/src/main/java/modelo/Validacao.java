@@ -2,12 +2,12 @@ package modelo;
 
 public class Validacao
 {
-    public Double n1;
-    public Double n2;
-    public String mensagem;
-    public String numero1;
-    public String numero2;
-    public String op;
+    private Double n1;
+    private Double n2;
+    private String mensagem;
+    private String numero1;
+    private String numero2;
+    private String op;
     
     public Validacao(String numero1, String numero2, String op)
     {
@@ -18,7 +18,7 @@ public class Validacao
     }
     
     
-    public void validar()
+    private void validar()
     {
         mensagem = "";
         try
@@ -33,4 +33,22 @@ public class Validacao
             mensagem = "Números inválidos";
         }
     }
+
+    public Double getN1()
+    {
+        return n1;
+    }
+
+    public Double getN2()
+    {
+        return n2;
+    }
+
+    public String getMensagem()
+    {
+        return mensagem;
+    }
+    
+    
+    
 }
