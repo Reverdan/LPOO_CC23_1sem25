@@ -1,13 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
- */
 package apresentacao;
 
-/**
- *
- * @author Rever
- */
+import modelo.Controle;
+
 public class frmPrincipal extends javax.swing.JDialog
 {
 
@@ -38,6 +32,13 @@ public class frmPrincipal extends javax.swing.JDialog
         setTitle("Primo");
 
         btnVerificaPrimo.setText("Verifica Primo");
+        btnVerificaPrimo.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                btnVerificaPrimoActionPerformed(evt);
+            }
+        });
 
         lblResposta.setText("Resposta");
 
@@ -69,6 +70,12 @@ public class frmPrincipal extends javax.swing.JDialog
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnVerificaPrimoActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnVerificaPrimoActionPerformed
+    {//GEN-HEADEREND:event_btnVerificaPrimoActionPerformed
+        Controle controle = new Controle(txfNumero.getText());
+        lblResposta.setText(controle.getMensagem());
+    }//GEN-LAST:event_btnVerificaPrimoActionPerformed
 
     /**
      * @param args the command line arguments

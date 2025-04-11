@@ -4,7 +4,6 @@ public class Controle
 {
     private String numero;
     private String mensagem;
-    private String resposta;
 
     public Controle(String numero)
     {
@@ -14,16 +13,21 @@ public class Controle
     
     private void Executar()
     {
-        
+        this.mensagem = "";
+        Validacao validacao = new Validacao(this.numero);
+        if (validacao.getMensagem().equals(""))
+        {
+            Primo primo = new Primo(validacao.getNum());
+            this.mensagem = primo.getResposta();
+        }
+        else
+        {
+            this.mensagem = validacao.getMensagem();
+        }
     }
     
     public String getMensagem()
     {
         return this.mensagem;
-    }
-    
-    public String getResposta()
-    {
-        return this.resposta;
     }
 }

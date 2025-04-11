@@ -1,10 +1,13 @@
 package com.mycompany.numeroprimo;
 
+import apresentacao.frmPrincipal;
+
 public class NumeroPrimo 
 {
 
     public static void main(String[] args) 
     {
-        System.out.println("Hello World!");
+        frmPrincipal frmP = new frmPrincipal(null, true);
+        frmP.setVisible(true);
     }
 }

@@ -14,7 +14,15 @@ public class Validacao
     
     private void Executar()
     {
-        
+        this.mensagem = "";
+        try
+        {
+            this.num = Integer.valueOf(this.numero);
+        }
+        catch (Exception e)
+        {
+            this.mensagem = "Digite valores válidos";
+        }
     }
 
     public int getNum()

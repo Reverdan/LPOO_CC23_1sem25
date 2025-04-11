@@ -13,7 +13,15 @@ public class Primo
     
     private void Executar()
     {
-        
+        this.resposta = "É primo";
+        for(int i = 2; i < num / 2 + 1; i++) // i++ = i = i + 1
+        {
+            if (num % i == 0)
+            {
+                this.resposta = "Não é primo";
+                break;
+            }
+        }
     }
 
     public String getResposta()
