@@ -1,10 +1,7 @@
 package modelo;
 
-public class Validacao
+public class Validacao extends absPropriedades
 {
-    private String numero;
-    private int num;
-    private String mensagem;
 
     public Validacao(String numero)
     {
@@ -12,7 +9,8 @@ public class Validacao
         this.Executar();
     }
     
-    private void Executar()
+    @Override
+    public void Executar()
     {
         this.mensagem = "";
         try
@@ -21,7 +19,7 @@ public class Validacao
         }
         catch (Exception e)
         {
-            this.mensagem = "Digite valores válidos";
+            this.mensagem = "Digite valores validos";
         }
     }
 

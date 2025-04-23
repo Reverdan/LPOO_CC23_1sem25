@@ -1,17 +1,15 @@
 package modelo;
 
-public class Controle
+public class Controle extends absPropriedades
 {
-    private String numero;
-    private String mensagem;
-
     public Controle(String numero)
     {
         this.numero = numero;
         this.Executar();
     }
     
-    private void Executar()
+    @Override
+    public void Executar()
     {
         this.mensagem = "";
         Validacao validacao = new Validacao(this.numero);

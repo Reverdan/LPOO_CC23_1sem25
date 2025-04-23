@@ -1,33 +1,32 @@
 package modelo;
 
-public class Primo
+public class Primo extends absPropriedades
 {
-    private int num;
-    private String resposta;
-
     public Primo(int num)
     {
         this.num = num;
         this.Executar();
     }
     
-    private void Executar()
+    public void Executar()
     {
-        this.resposta = "É primo";
+        this.resposta = "E primo";
         for(int i = 2; i < num / 2 + 1; i++) // i++ = i = i + 1
         {
             if (num % i == 0)
             {
-                this.resposta = "Não é primo";
+                this.resposta = "Nao e primo";
                 break;
             }
         }
     }
-
+   
     public String getResposta()
     {
         return resposta;
     }
+
+    
     
     
 
